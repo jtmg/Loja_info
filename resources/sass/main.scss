@@ -1,0 +1,59 @@
+
+// 1. na pasta exercises cria o ficheiro input.scss
+
+// 2. na linha de comandos, na pasta exercises, coloca o comando para automaticamente gerar o ficheiro output.css
+// sass --watch input.scss:output.css
+
+// Criando uma variável para definir a cor da border
+$border-color: #ccc;
+
+.box {
+  border: 1px solid $border-color;
+}
+
+
+// descobre o que deves usar para gerar o css
+.foo {
+  background: orange;
+  p {
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+
+// Usa uma divisão para definir o tamanho
+html {
+  font-size: (5 / 10) * 1em; // 1/2em 1em/2em
+}
+
+
+// descobre o que deves usar para gerar o css
+// Our reusable default presentational class
+%user-dialog-box-shared {
+  border: 10px solid white;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.user-dialog-box {
+  @extend %user-dialog-box-shared;
+}
+
+.alert-winning-user {
+  @extend %user-dialog-box-shared;
+  border-color: white;
+}
+
+
+// cria um mixin dialog-box() com um argumento para definir a cor da border
+@mixin dialog-box($border-color) {
+  border: 10px solid $border-color;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.alert-winning-user {
+  @include dialog-box(green);
+}

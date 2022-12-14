@@ -1,0 +1,32 @@
+.box {
+  border: 1px solid #ccc;
+}
+
+.foo {
+  background: orange;
+}
+.foo p {
+  color: blue;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+html {
+  font-size: 0.5em;
+}
+
+.alert-winning-user, .user-dialog-box {
+  border: 10px solid white;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.alert-winning-user {
+  border-color: white;
+}
+
+.alert-winning-user {
+  border: 10px solid green;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
